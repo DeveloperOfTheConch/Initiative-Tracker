@@ -15,7 +15,6 @@ struct CombatView: View {
         Text("Combat View")
         Button {
             selector = 2
-            
         } label: {
             Text("Next")
         }

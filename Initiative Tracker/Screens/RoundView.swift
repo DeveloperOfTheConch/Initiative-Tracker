@@ -15,7 +15,6 @@ struct RoundView: View {
         Text("Round View")
         Button {
             selector = 3
-            
         } label: {
             Text("Next")
         }

@@ -15,7 +15,6 @@ struct CreatureView: View {
         Text("Creature View")
         Button {
             selector = 1
-            
         } label: {
             Text("Next")
         }
