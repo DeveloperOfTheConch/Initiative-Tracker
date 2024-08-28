@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct Creature: Decodable, Identifiable {
-    let id: Int
+struct Creature: Decodable, Identifiable, Hashable {
+    var id = UUID()
     let name: String
     let meta: String
     let Armor_Class: String
@@ -43,9 +43,8 @@ struct Creature: Decodable, Identifiable {
 
 struct MockData {
     
-    let sampleCreature = Creature(id: 1, 
-                                  name: "Tarrasque",
-                                  meta: "Gargantuan monstrosity, unaligned", 
+    static let sampleTarrasque = Creature(name: "Tarrasque",
+                                  meta: "Gargantuan monstrosity, unaligned",
                                   Armor_Class: "25 (Natural Armor)",
                                   Hit_Points: "676 (33d20 + 330",
                                   Speed: "40 ft.",
@@ -70,8 +69,13 @@ struct MockData {
                                   Damage_Resistances: nil,
                                   Condition_Immunities: "Charmed, Frightened, Paralyzed, Poisoned",
                                   Damage_Immunities: "Fire, Poison; Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
-                                  Saving_Throws: "INt +5, WIS +9, CHA +9",
+                                  Saving_Throws: "INT +5, WIS +9, CHA +9",
                                   Skills: nil,
                                   Legendary_Actions: "<p>The tarrasque can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The tarrasque regains spent legendary actions at the start of its turn.</p><p><em><strong>Attack.</strong></em> The tarrasque makes one claw attack or tail attack. </p><p><em><strong>Move.</strong></em> The tarrasque moves up to half its speed. </p><p><em><strong>Chomp (Costs 2 Actions).</strong></em> The tarrasque makes one bite attack or uses its Swallow.</p>")
     
+    
+    static let sampleCreature = Creature(name: "Grelph", meta: "Small Gremlin, neutral evil", Armor_Class: "15", Hit_Points: "100 (10d10 + 50)", Speed: "30 ft.", STR: "10", DEX: "12", CON: "14", INT: "16", WIS: "18", CHA: "2", STR_mod: "(+0)", DEX_mod: "(+1)", CON_mod: "(+2)", INT_mod: "(+3)", WIS_mod: "(+4)", CHA_mod: "(-4)", Senses: "Darkvision, Passive Perception 14", Languages: "Common", Challenge: "0 (1 XP)", Traits: "<p><em>Kills people</em> this thing is a freaking killer and will eat you </p>", Actions: "<p><em><strong>Multiattack.</strong></em> The tarrasque can use its Frightful Presence. It then makes five attacks: one with its bite, two with its claws, one with its horns, and one with its tail. It can use its Swallow instead of its bite. </p>", img_url: "https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg", Damage_Resistances: nil, Condition_Immunities: "Dying", Damage_Immunities: nil, Saving_Throws: "STR +11", Skills: "Athletics", Legendary_Actions: nil)
+    
+    
+    static let sampleList = [sampleTarrasque, sampleTarrasque, sampleCreature, sampleTarrasque, sampleTarrasque, sampleCreature, sampleTarrasque, sampleCreature]
 }
