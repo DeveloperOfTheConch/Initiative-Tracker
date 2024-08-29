@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9466A5012C80C7380045AD0E /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A5002C80C7380045AD0E /* Creature.swift */; };
+		9466A5062C8130820045AD0E /* CreatureSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A5052C8130820045AD0E /* CreatureSimpleCell.swift */; };
 		94AFB1952C7D2B4100DB1958 /* Initiative_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AFB1942C7D2B4100DB1958 /* Initiative_TrackerApp.swift */; };
 		94AFB1992C7D2B4300DB1958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AFB1982C7D2B4300DB1958 /* Assets.xcassets */; };
 		94AFB19C2C7D2B4300DB1958 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AFB19B2C7D2B4300DB1958 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		9466A5002C80C7380045AD0E /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
+		9466A5052C8130820045AD0E /* CreatureSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureSimpleCell.swift; sourceTree = "<group>"; };
 		94AFB1912C7D2B4100DB1958 /* Initiative Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Initiative Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94AFB1942C7D2B4100DB1958 /* Initiative_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initiative_TrackerApp.swift; sourceTree = "<group>"; };
 		94AFB1982C7D2B4300DB1958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,8 +50,25 @@
 			isa = PBXGroup;
 			children = (
 				94AFB1A72C7D451300DB1958 /* RoundView.swift */,
+				9466A5052C8130820045AD0E /* CreatureSimpleCell.swift */,
 			);
 			path = RoundView;
+			sourceTree = "<group>";
+		};
+		9466A5032C812CB10045AD0E /* CombatView */ = {
+			isa = PBXGroup;
+			children = (
+				94AFB1A92C7D451F00DB1958 /* CombatView.swift */,
+			);
+			path = CombatView;
+			sourceTree = "<group>";
+		};
+		9466A5042C812CBD0045AD0E /* CreatureView */ = {
+			isa = PBXGroup;
+			children = (
+				94AFB1AB2C7D452700DB1958 /* CreatureView.swift */,
+			);
+			path = CreatureView;
 			sourceTree = "<group>";
 		};
 		94AFB1882C7D2B4100DB1958 = {
@@ -93,9 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				94AFB1A42C7D3E0200DB1958 /* TabView.swift */,
-				94AFB1A92C7D451F00DB1958 /* CombatView.swift */,
+				9466A5032C812CB10045AD0E /* CombatView */,
 				9466A5022C812B780045AD0E /* RoundView */,
-				94AFB1AB2C7D452700DB1958 /* CreatureView.swift */,
+				9466A5042C812CBD0045AD0E /* CreatureView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -190,6 +209,7 @@
 				94AFB1AA2C7D451F00DB1958 /* CombatView.swift in Sources */,
 				94AFB1A52C7D3E0200DB1958 /* TabView.swift in Sources */,
 				94AFB1AC2C7D452700DB1958 /* CreatureView.swift in Sources */,
+				9466A5062C8130820045AD0E /* CreatureSimpleCell.swift in Sources */,
 				94AFB1B22C7D769300DB1958 /* CreatureData.swift in Sources */,
 				9466A5012C80C7380045AD0E /* Creature.swift in Sources */,
 				94AFB1AF2C7D673E00DB1958 /* TabBar.swift in Sources */,
