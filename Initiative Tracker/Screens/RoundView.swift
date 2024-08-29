@@ -11,32 +11,29 @@ struct RoundView: View {
     
     @Binding var selector: Int
     
+    @State var realList: [Creature] = []
+
+    
     @State var selected: [UUID] = []
     
     var body: some View {
         Text("Round View")
         
         List() {
-            ForEach(MockData.sampleList) { creature in
+            ForEach(realList) { creature in
                 
-                var isUp: Bool {
-                    if selected.firstIndex(of: creature.id) != nil {
-                        return true
-                    }
-                    return false
-                }
+                
                 
                 HStack {
-                    Text(creature.name)
+                    Text(creature.data.name)
                         .font(.title)
-                    Text("HP: " + creature.Hit_Points.prefix(3))
+                    Text("HP: \(creature.health)")
                     
                     Spacer()
                     
                     Button {
-                        let temp = creature.id
-                        isUp ? print(selected.firstIndex(of: temp)!) : selected.append(temp)
-                        print(selected)
+                        print(creature.id)
+                        
                     } label: {
                         Image(systemName:"chevron.down")
 
@@ -47,9 +44,7 @@ struct RoundView: View {
                 }
                 .padding(10)
                 
-                if isUp {
-                    Text("HELLO WORLD")
-                }
+                
             }
         }
         .listStyle(.plain)
@@ -57,6 +52,7 @@ struct RoundView: View {
         
         Button {
             selector = 3
+            realList.append(Creature(data: MockData.sampleTarrasque))
         } label: {
             Text("Next")
         }
