@@ -44,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9466A5022C812B780045AD0E /* RoundView */ = {
+			isa = PBXGroup;
+			children = (
+				94AFB1A72C7D451300DB1958 /* RoundView.swift */,
+			);
+			path = RoundView;
+			sourceTree = "<group>";
+		};
 		94AFB1882C7D2B4100DB1958 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +94,7 @@
 			children = (
 				94AFB1A42C7D3E0200DB1958 /* TabView.swift */,
 				94AFB1A92C7D451F00DB1958 /* CombatView.swift */,
-				94AFB1A72C7D451300DB1958 /* RoundView.swift */,
+				9466A5022C812B780045AD0E /* RoundView */,
 				94AFB1AB2C7D452700DB1958 /* CreatureView.swift */,
 			);
 			path = Screens;
