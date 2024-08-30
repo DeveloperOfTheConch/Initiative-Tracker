@@ -45,7 +45,7 @@ struct MockData {
     static let sampleTarrasque = CreatureData(name: "Tarrasque",
                                   meta: "Gargantuan monstrosity, unaligned",
                                   Armor_Class: "25 (Natural Armor)",
-                                  Hit_Points: "676 (33d20 + 330",
+                                  Hit_Points: "676 (33d20 + 330)",
                                   Speed: "40 ft.",
                                   STR: "30",
                                   DEX: "11",

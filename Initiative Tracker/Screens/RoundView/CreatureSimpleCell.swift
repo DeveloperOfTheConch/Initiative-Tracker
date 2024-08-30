@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreatureSimpleCell: View {
     
-    var creature: Creature
+    @ObservedObject var creature: Creature
     @Binding var selectedList: [UUID]
     
     var body: some View {
@@ -73,7 +73,6 @@ struct CreatureSimpleCell: View {
     List(){
         ForEach(MockList.sampleList) { creature in
             CreatureSimpleCell(creature:creature,selectedList:.constant([]))
-            
         }
     }
     .listStyle(.plain)

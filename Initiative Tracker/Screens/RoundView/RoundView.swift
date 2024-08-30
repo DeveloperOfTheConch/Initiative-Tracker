@@ -11,29 +11,34 @@ struct RoundView: View {
     
     @Binding var selector: Int
     
-    @State var realList: [Creature] = []
-    
-    @State var selectedList: [UUID] = []
+    @StateObject var vm = RoundModel()
     
     var body: some View {
         Text("Round View")
         
         List() {
-            ForEach(MockList.sampleList) { creature in
-                CreatureSimpleCell(creature: creature, selectedList: $selectedList)
+            ForEach(vm.realList) { creature in
+                
+                CreatureSimpleCell(creature: creature, selectedList: $vm.selectedList)
+                
+                if vm.selectedList.contains(creature.id) {
+                    CreatureComplexCell(creature:creature)
+                        .listRowSeparator(.hidden, edges: .top)
+                }
+                
             }
         }
         .listStyle(.plain)
         
         HStack{
             Button {
-                realList.append(Creature(data:MockData.sampleCreature))
+                vm.realList.append(Creature(data:MockData.sampleCreature))
             } label: {
                 Text("Add 1")
             }
             
             Button {
-                realList.append(Creature(data:MockData.sampleTarrasque))
+                vm.realList.append(Creature(data:MockData.sampleTarrasque))
             } label: {
                 Text("Add 2")
             }
