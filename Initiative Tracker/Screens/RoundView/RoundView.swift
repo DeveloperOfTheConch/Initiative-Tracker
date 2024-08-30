@@ -17,7 +17,7 @@ struct RoundView: View {
         Text("Round View")
         
         List() {
-            ForEach(vm.realList) { creature in
+            ForEach(vm.realList.sorted{ $0.initiative > $1.initiative}) { creature in
                 
                 CreatureSimpleCell(creature: creature, selectedList: $vm.selectedList)
                 
