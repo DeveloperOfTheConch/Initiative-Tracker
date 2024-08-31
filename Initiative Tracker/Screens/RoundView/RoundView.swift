@@ -19,7 +19,7 @@ struct RoundView: View {
         List() {
             ForEach(vm.realList.sorted{ $0.initiative > $1.initiative}) { creature in
                 
-                CreatureSimpleCell(creature: creature, selectedList: $vm.selectedList)
+                CreatureSimpleCell(creature: creature, selectedList: $vm.selectedList,activeID:vm.activeCreature)
                 
                 if vm.selectedList.contains(creature.id) {
                     CreatureComplexCell(creature:creature)
@@ -44,11 +44,25 @@ struct RoundView: View {
             }
         }
         
-        Button {
-            selector = 3
+        HStack {
+            Button {
+                selector = 1
 
-        } label: {
-            Text("Next")
+            } label: {
+                Text("\(vm.roundCount)")
+            }
+            Button {
+                vm.combatActive ? vm.advanceTurn() : vm.beginCombat()
+
+            } label: {
+                Text(vm.combatActive ? "Next" : "Roll")
+            }
+            Button {
+                selector = 3
+
+            } label: {
+                Text("Creatures")
+            }
         }
     }
 }

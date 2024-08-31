@@ -11,6 +11,11 @@ struct CreatureSimpleCell: View {
     
     @ObservedObject var creature: Creature
     @Binding var selectedList: [UUID]
+    var activeID: UUID
+    var active: Bool {
+        if activeID == creature.id { return true }
+        return false
+    }
     
     var body: some View {
         
@@ -22,6 +27,8 @@ struct CreatureSimpleCell: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width:50,height:50)
+                        .foregroundStyle(active ? .blue : .primary)
+
                     
                     Text("\(creature.initiative)")
                         .font(.title3)
@@ -72,7 +79,7 @@ struct CreatureSimpleCell: View {
 #Preview {
     List(){
         ForEach(MockList.sampleList) { creature in
-            CreatureSimpleCell(creature:creature,selectedList:.constant([]))
+            CreatureSimpleCell(creature:creature,selectedList:.constant([]),activeID:UUID())
         }
     }
     .listStyle(.plain)
