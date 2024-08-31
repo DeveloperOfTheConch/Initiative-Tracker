@@ -11,6 +11,7 @@
 		9466A5062C8130820045AD0E /* CreatureSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A5052C8130820045AD0E /* CreatureSimpleCell.swift */; };
 		9466A5082C8136840045AD0E /* CreatureComplexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A5072C8136840045AD0E /* CreatureComplexCell.swift */; };
 		9466A50A2C8176B40045AD0E /* RoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A5092C8176B40045AD0E /* RoundModel.swift */; };
+		948514AC2C839C0400BA6E5E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948514AB2C839C0400BA6E5E /* NetworkManager.swift */; };
 		94AFB1952C7D2B4100DB1958 /* Initiative_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AFB1942C7D2B4100DB1958 /* Initiative_TrackerApp.swift */; };
 		94AFB1992C7D2B4300DB1958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AFB1982C7D2B4300DB1958 /* Assets.xcassets */; };
 		94AFB19C2C7D2B4300DB1958 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AFB19B2C7D2B4300DB1958 /* Preview Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		9466A5052C8130820045AD0E /* CreatureSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureSimpleCell.swift; sourceTree = "<group>"; };
 		9466A5072C8136840045AD0E /* CreatureComplexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureComplexCell.swift; sourceTree = "<group>"; };
 		9466A5092C8176B40045AD0E /* RoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundModel.swift; sourceTree = "<group>"; };
+		948514AB2C839C0400BA6E5E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		94AFB1912C7D2B4100DB1958 /* Initiative Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Initiative Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94AFB1942C7D2B4100DB1958 /* Initiative_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initiative_TrackerApp.swift; sourceTree = "<group>"; };
 		94AFB1982C7D2B4300DB1958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = CreatureView;
 			sourceTree = "<group>";
 		};
+		948514AA2C839BEF00BA6E5E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				948514AB2C839C0400BA6E5E /* NetworkManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		94AFB1882C7D2B4100DB1958 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		94AFB1932C7D2B4100DB1958 /* Initiative Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				948514AA2C839BEF00BA6E5E /* Utilities */,
 				94AFB1AD2C7D673000DB1958 /* Views */,
 				94AFB1A62C7D44F100DB1958 /* Screens */,
 				94AFB1B02C7D767D00DB1958 /* Structure */,
@@ -212,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948514AC2C839C0400BA6E5E /* NetworkManager.swift in Sources */,
 				94AFB1AA2C7D451F00DB1958 /* CombatView.swift in Sources */,
 				94AFB1A52C7D3E0200DB1958 /* TabView.swift in Sources */,
 				94AFB1AC2C7D452700DB1958 /* CreatureView.swift in Sources */,

@@ -27,6 +27,13 @@ struct RoundView: View {
                 }
                 
             }
+            .onDelete(perform: { indexSet in
+                let temp = vm.realList.sorted(by:{ $0.initiative > $1.initiative})[indexSet.first!]
+                print(temp)
+                /// so what do we have here
+                /// we have an indexSet of the value in
+
+            })
         }
         .listStyle(.plain)
         
@@ -49,7 +56,7 @@ struct RoundView: View {
                 selector = 1
 
             } label: {
-                Text("\(vm.roundCount)")
+                Text("Combats")
             }
             Button {
                 vm.combatActive ? vm.advanceTurn() : vm.beginCombat()

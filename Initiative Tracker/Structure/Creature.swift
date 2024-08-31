@@ -10,6 +10,7 @@ import Foundation
 
 
 class Creature: Identifiable, ObservableObject {
+    
     let data: CreatureData
     let id = UUID()
     @Published var initiative: Int
