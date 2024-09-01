@@ -49,7 +49,7 @@ struct TabView: View {
                     .frame(width:15,height:1)
                 
             }
-            .background(.secondary)
+            .background(.gray)
             
             Rectangle()
                 .frame(height:5)
@@ -57,11 +57,11 @@ struct TabView: View {
         }
     
         if selector == 1{
-            CombatView(selector:$selector)
+            CombatView(selector:$selector, showingAddMenu:$addButtonPressed)
         } else if selector == 2 {
             RoundView(selector:$selector, showingAddMenu:$addButtonPressed)
         } else if selector == 3 {
-            CreatureView(selector:$selector)
+            CreatureView(selector:$selector, showingAddMenu:$addButtonPressed)
         }
             
         

@@ -27,7 +27,7 @@ struct CreatureSimpleCell: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width:50,height:50)
-                        .foregroundStyle(active ? .blue : .primary)
+                        .foregroundStyle(active ? .blue : .black)
 
                     
                     Text("\(creature.initiative)")

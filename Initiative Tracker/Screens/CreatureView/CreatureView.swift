@@ -10,6 +10,7 @@ import SwiftUI
 struct CreatureView: View {
     
     @Binding var selector: Int
+    @Binding var showingAddMenu: Bool
     
     var body: some View {
         Text("Creature View")
@@ -22,5 +23,5 @@ struct CreatureView: View {
 }
 
 #Preview {
-    CreatureView(selector:.constant(3))
+    CreatureView(selector:.constant(3),showingAddMenu: .constant(false))
 }

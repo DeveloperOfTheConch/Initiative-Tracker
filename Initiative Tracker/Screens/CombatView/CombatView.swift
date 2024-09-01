@@ -10,6 +10,7 @@ import SwiftUI
 struct CombatView: View {
     
     @Binding var selector: Int
+    @Binding var showingAddMenu: Bool
     
     var body: some View {
         Text("Combat View")
@@ -22,5 +23,5 @@ struct CombatView: View {
 }
 
 #Preview {
-    CombatView(selector:.constant(1))
+    CombatView(selector:.constant(1),showingAddMenu: .constant(false))
 }
