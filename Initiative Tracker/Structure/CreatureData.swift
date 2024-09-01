@@ -39,6 +39,9 @@ struct CreatureData: Decodable {
     let Legendary_Actions: String?
 }
 
+struct CreatureResponse: Decodable {
+    let request: [CreatureData]
+}
 
 struct MockData {
     

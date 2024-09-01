@@ -13,9 +13,10 @@ struct RoundView: View {
     
     @StateObject var vm = RoundModel()
     
+    @Binding var showingAddMenu: Bool
+    
     var body: some View {
-        Text("Round View")
-        
+
         List() {
             ForEach(vm.realList.sorted{ $0.initiative > $1.initiative}) { creature in
                 
@@ -35,6 +36,7 @@ struct RoundView: View {
             })
         }
         .listStyle(.plain)
+
         
         HStack{
             Button {
@@ -74,5 +76,5 @@ struct RoundView: View {
 }
 
 #Preview {
-    RoundView(selector:.constant(2))
+    TabView()
 }

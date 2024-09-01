@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9405E3F72C84DA08001E880E /* ITError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405E3F62C84DA08001E880E /* ITError.swift */; };
+		9405E3F92C84E1BC001E880E /* TopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405E3F82C84E1BC001E880E /* TopButton.swift */; };
 		9466A5012C80C7380045AD0E /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A5002C80C7380045AD0E /* Creature.swift */; };
 		9466A5062C8130820045AD0E /* CreatureSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A5052C8130820045AD0E /* CreatureSimpleCell.swift */; };
 		9466A5082C8136840045AD0E /* CreatureComplexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9466A5072C8136840045AD0E /* CreatureComplexCell.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9405E3F62C84DA08001E880E /* ITError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITError.swift; sourceTree = "<group>"; };
+		9405E3F82C84E1BC001E880E /* TopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopButton.swift; sourceTree = "<group>"; };
 		9466A5002C80C7380045AD0E /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 		9466A5052C8130820045AD0E /* CreatureSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureSimpleCell.swift; sourceTree = "<group>"; };
 		9466A5072C8136840045AD0E /* CreatureComplexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureComplexCell.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				948514AB2C839C0400BA6E5E /* NetworkManager.swift */,
+				9405E3F62C84DA08001E880E /* ITError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				94AFB1AE2C7D673D00DB1958 /* TabBar.swift */,
+				9405E3F82C84E1BC001E880E /* TopButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				948514AC2C839C0400BA6E5E /* NetworkManager.swift in Sources */,
+				9405E3F92C84E1BC001E880E /* TopButton.swift in Sources */,
 				94AFB1AA2C7D451F00DB1958 /* CombatView.swift in Sources */,
 				94AFB1A52C7D3E0200DB1958 /* TabView.swift in Sources */,
+				9405E3F72C84DA08001E880E /* ITError.swift in Sources */,
 				94AFB1AC2C7D452700DB1958 /* CreatureView.swift in Sources */,
 				9466A5062C8130820045AD0E /* CreatureSimpleCell.swift in Sources */,
 				9466A5082C8136840045AD0E /* CreatureComplexCell.swift in Sources */,
