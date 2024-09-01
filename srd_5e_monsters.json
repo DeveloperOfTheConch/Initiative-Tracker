@@ -1,4 +1,4 @@
-[
+{"request":[
   {
     "name": "Aboleth",
     "meta": "Large aberration, lawful evil",
@@ -8746,4 +8746,4 @@
     "Actions": "<p><em><strong>Slam.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 4 (1d6 + 1) bludgeoning damage.</p>",
     "img_url": "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/71/1000/1000/636252733510786769.jpeg"
   }
-]
+]}
