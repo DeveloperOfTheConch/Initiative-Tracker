@@ -15,6 +15,7 @@ class Creature: Identifiable, ObservableObject {
     let id = UUID()
     @Published var initiative: Int
     @Published var health: Int
+    @Published var tempHP: Int = 0
     @Published var armorClass: Int
     @Published var str: Int
     @Published var dex: Int
@@ -23,6 +24,7 @@ class Creature: Identifiable, ObservableObject {
     @Published var wis: Int
     @Published var cha: Int
     @Published var number: Int?
+    
     
     
     init(data: CreatureData) {

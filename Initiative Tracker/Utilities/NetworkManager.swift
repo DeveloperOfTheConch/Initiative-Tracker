@@ -12,5 +12,6 @@ import SwiftUI
 
 final class NetworkManager {
     
-    
+    static let shared = NetworkManager()
+    static let creatureURL = ""
 }

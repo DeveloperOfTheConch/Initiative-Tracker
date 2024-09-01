@@ -19,20 +19,19 @@ struct RoundView: View {
         List() {
             ForEach(vm.realList.sorted{ $0.initiative > $1.initiative}) { creature in
                 
-                CreatureSimpleCell(creature: creature, selectedList: $vm.selectedList,activeID:vm.activeCreature)
-                
-                if vm.selectedList.contains(creature.id) {
-                    CreatureComplexCell(creature:creature)
-                        .listRowSeparator(.hidden, edges: .top)
+                VStack{
+                    
+                    CreatureSimpleCell(creature: creature, selectedList: $vm.selectedList,activeID:vm.activeCreatureID)
+                    
+                    if vm.selectedList.contains(creature.id) {
+                        CreatureComplexCell(creature:creature)
+                            .listRowSeparator(.hidden, edges: .top)
+                    }
                 }
                 
             }
             .onDelete(perform: { indexSet in
-                let temp = vm.realList.sorted(by:{ $0.initiative > $1.initiative})[indexSet.first!]
-                print(temp)
-                /// so what do we have here
-                /// we have an indexSet of the value in
-
+                vm.deleteCreature(indexSet: indexSet)
             })
         }
         .listStyle(.plain)

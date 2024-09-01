@@ -14,14 +14,21 @@ final class RoundModel: ObservableObject {
     
     @Published var combatActive: Bool = false
     @Published var roundCount: Int = 0
-    @Published var activeCreature: UUID = UUID()
+    @Published var activeCreatureID: UUID = UUID()
     
     func beginCombat() {
+        if realList.count == 0 { return }
         combatActive = true
         for creature in realList {
             creature.rerollInit()
         }
-        activeCreature = realList.sorted{ $0.initiative > $1.initiative}[0].id
+        activeCreatureID = realList.sorted{ $0.initiative > $1.initiative}[0].id
+    }
+    
+    func endCombat(){
+        combatActive = false
+        activeCreatureID = UUID()
+        realList = []
     }
     
     func advanceTurn() {
@@ -29,19 +36,40 @@ final class RoundModel: ObservableObject {
         for (index, creature) in realList.sorted(by: { $0.initiative > $1.initiative}).enumerated() {
 
             if tick {
-                activeCreature = creature.id
+                activeCreatureID = creature.id
                 break
             }
-            if creature.id == activeCreature {
+            if creature.id == activeCreatureID {
                 tick.toggle()
             }
             if tick && index == realList.sorted(by: { $0.initiative > $1.initiative}).count-1 {
-                activeCreature = realList.sorted{ $0.initiative > $1.initiative}[0].id
+                activeCreatureID = realList.sorted{ $0.initiative > $1.initiative}[0].id
                 roundCount+=1
                 break
             }
             
         }
+    }
+    
+    func deleteCreature(indexSet:IndexSet) {
+        
+        let temp = realList.sorted(by:{ $0.initiative > $1.initiative})[indexSet.first!].id
+        
+        if let _ = selectedList.firstIndex(of:temp) {
+            selectedList.remove(atOffsets: [selectedList.firstIndex(of: temp)!])
+        }
+        
+        if temp == activeCreatureID { advanceTurn() }
+        
+        for (index, creature) in realList.enumerated() {
+            if creature.id == temp {
+                realList.remove(at:index)
+            }
+        }
+        
+        if realList.count == 0 {endCombat()}
+        
+        
     }
     
 }
