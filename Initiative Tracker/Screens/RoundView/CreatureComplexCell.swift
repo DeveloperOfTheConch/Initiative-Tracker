@@ -12,7 +12,8 @@ struct CreatureComplexCell: View {
     var creature: Creature
     
     var body: some View {
-        Text(creature.data.Traits)
+        Text(creature.data.stats)
+        Text(creature.data.text)
     }
 }
 

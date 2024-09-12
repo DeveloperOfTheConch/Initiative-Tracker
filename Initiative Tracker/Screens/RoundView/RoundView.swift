@@ -46,7 +46,7 @@ struct RoundView: View {
             }
             
             Button {
-                vm.realList.append(Creature(data:MockData.sampleTarrasque))
+                vm.realList.append(Creature(data:MockData.sampleCreature))
             } label: {
                 Text("Add 2")
             }
@@ -64,7 +64,9 @@ struct RoundView: View {
 
             } label: {
                 Text(vm.combatActive ? "Next" : "Roll")
+                    
             }
+            
             Button {
                 selector = 3
 
