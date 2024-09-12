@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct CreatureData: Decodable {
+struct CreatureData: Decodable, Identifiable {
+    let id = UUID()
     let name: String
     let meta: String
     let Armor_Class: String

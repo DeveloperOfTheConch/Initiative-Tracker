@@ -13,7 +13,7 @@ import SwiftUI
 final class NetworkManager {
     
     static let shared = NetworkManager()
-    private let creatureURL = "https://raw.githubusercontent.com/DeveloperOfTheConch/Initiative-Tracker/main/srd_5e_monsters.json"
+    let creatureURL = "https://developeroftheconch.github.io/Initiative-Tracker/srd_5e_monsters.json"
     
     private init () {}
     
