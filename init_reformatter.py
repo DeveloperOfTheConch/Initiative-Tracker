@@ -21,7 +21,7 @@ for item in data["request"]:
         hpAdd = int(hp[hp.find("+")+2:hp.find(")")])
     elif "-" in hp.split():
         hpCount = int(hp[hp.find("d")+1:hp.find(" -")])
-        hpAdd = int(hp[hp.find("-")+2:hp.find(")")])
+        hpAdd = -int(hp[hp.find("-")+2:hp.find(")")])
     else:
         hpCount = int(hp[hp.find("d")+1:hp.find(")")])
         hpAdd = 0
