@@ -8,7 +8,7 @@ data = json.load(file1)
 formattedList = []
 
 def HTMLFormat(title,text):
-    return "<p><b>"+title+" </b> " + text + "</p>"
+    return '<p align="left" style="font-size: large"><b>'+title+" </b> " + text + "</p>"
 
 for item in data["request"]:
     speed = item["Speed"]
@@ -52,9 +52,9 @@ for item in data["request"]:
         stats=stats+HTMLFormat("Condition Immunities",con)
    
     stats=stats+HTMLFormat("Senses",item["Senses"])
-    stats=stats+HTMLFormat("Languages",item["Speed"])
-    stats=stats+HTMLFormat("Challenge",item["Speed"])
-
+    stats=stats+HTMLFormat("Languages",item["Languages"])
+    stats=stats+HTMLFormat("Challenge",item["Challenge"])
+    stats=stats+"<hr>"
     text = ""
     if "Traits" in item:
         text=text+item["Traits"]
@@ -65,7 +65,8 @@ for item in data["request"]:
         leg = item["Legendary_Actions"]
         text=text+"<h1>Legendary Actions</h1>"
         text=text+leg
-
+    text=text.replace("<p>",'<p align="left" style="font-size: large">')
+    text=text.replace("<h1>","<h2>")
 
     formattedList.append({"name": item["name"],
                           "type": item["meta"],
@@ -84,6 +85,6 @@ for item in data["request"]:
                           "stats": stats,
                           "text": text
                           })
-print(formattedList[0])
+print(formattedList[4])
 json_item = json.dumps({"request":formattedList})
 file2.write(json_item)
